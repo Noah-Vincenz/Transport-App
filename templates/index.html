@@ -11,12 +11,12 @@
     <div class="col-md-12">
       <h2>Bus Stops</h2>
       <div class="list-group">
-        {% for map_item in items %}
+        {% for bus_stop in bus_stops %}
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{ map_item['name'] }}</h5>
+            <h5 class="mb-1">{{ bus_stop['name'] }}</h5>
           </div>
           <div class="list-group">
-            {% for bus in map_item['bus_list'] %}
+            {% for bus in bus_stop['bus_list'] %}
             <div class="list-group-item">
               <small>Line Number: {{ bus.number }}</small><br>
               <small>Estimated Arrival: {{ bus.estimated_dep_time }}</small><br>
