@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Transport App{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h1 class="display-4">Transport App</h1>
+    <p class="lead">Just another transport app.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Bus Stops</h2>
+      <div class="list-group">
+        {% for map_item in items %}
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ map_item['name'] }}</h5>
+          </div>
+          <div class="list-group">
+            {% for bus in map_item['bus_list'] %}
+            <div class="list-group-item">
+              <small>Line Number: {{ bus.number }}</small><br>
+              <small>Estimated Arrival: {{ bus.estimated_dep_time }}</small><br>
+              <small>Final Destination: {{ bus.destination }}</small><br>
+            </div>
+            {% endfor %}
+          </div>
+          <br>
+        {% endfor %}
+      </div><br>
+    </div>
+  </div>
+{% endblock %}
