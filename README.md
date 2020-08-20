@@ -1,5 +1,3 @@
-# DevOps Apprenticeship: Project Exercise
-
 ## Getting started
 
 The project uses a virtual environment to isolate package dependencies. To create the virtual environment and install required packages, run the following from a bash shell terminal:
